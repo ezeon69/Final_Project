@@ -1,6 +1,5 @@
 public class Site{
 
-    public Site s;
     private int row;
     private int col;
 
@@ -18,7 +17,7 @@ public class Site{
     }
 
     public boolean equals(Site Other){
-	return (s.getRow() == Other.getRow()) && (s.getCol() == Other.getCol());
+	return (getRow() == Other.getRow()) && (getCol() == Other.getCol());
     }
     
     
