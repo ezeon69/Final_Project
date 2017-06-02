@@ -19,7 +19,10 @@ public class Site{
     public boolean equals(Site Other){
 	return (getRow() == Other.getRow()) && (getCol() == Other.getCol());
     }
-    
-    
+
+    //manhattan distance between site and other site
+    public int distanceTo(Site Other){
+        return Math.abs(row - Other.getRow()) + Math.abs(col - Other.getCol());
+    }
 
 }

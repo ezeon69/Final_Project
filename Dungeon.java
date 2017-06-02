@@ -1,9 +1,9 @@
 public class Dungeon{
+
+    private int size;
     
-    private char[][] board;
-    
-    public Dungeon(File filename){	
-	
+    public Dungeon(char[][]board){	
+	size = board.length;
 	
     }
 
@@ -12,7 +12,21 @@ public class Dungeon{
     }
     
     public boolean isLegalMove(Site a, Site b){
-	if ((a.getRow() + 1 == b.getRow()) && (a.getCol() == b.getCol())){
+	//check in bounds
+        if (a.getRow() < 0 ||
+	    a.getCol() < 0 ||
+	    a.getRow() > size() ||
+	    a.getCol() > size){
+	    return false;
+	}
+	if (b.getRow() < 0 ||
+	    b.getCol() < 0 ||
+	    b.getRow() > size() ||
+	    b.getCol() > size){
+	    return false;
+	}
+	//check within one square
+        else if ((a.getRow() + 1 == b.getRow()) && (a.getCol() == b.getCol())){
 	    return true;
 	}
 	else if ((a.getRow() - 1 == b.getRow()) && (a.getCol() == b.getCol())){
@@ -26,7 +40,7 @@ public class Dungeon{
 	}
 	else{
 	    return false;
-	}
+	}	
     }
     
     public boolean isCorridor(Site s){
