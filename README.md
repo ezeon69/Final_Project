@@ -3,14 +3,18 @@
 Rogue is a game where there is a dungeon with a specified size, a monster (the computer) and the player. If the monster intercepts the player, the monster attacks the player, and depending on its health, the player continues or loses the game. The original game has the player pick up weapons and then allow the player to attack the monster. The fighting is done by the computer, and is a bit random. So instead, we decided to have the player pick up traps and strategically set them up across the map to defeat the monsters instead of fighting them and letting the computer decide the outcome, regardless of how skilled the player might be. 
 
 Features : 
+
 Dungeon
+
 -will be text based
 
 -simple graphics like one letter representing the player, monster or tiles
 
 -dimension of NxN
 
+
 Player
+
 -The player moves one space at a time
 
 -The player can pick up traps by walking over the square with the item
