@@ -5,12 +5,16 @@ Rogue is a game where there is a dungeon with a specified size, a monster (the c
 Features : 
 Dungeon
 -will be text based
+
 -simple graphics like one letter representing the player, monster or tiles
+
 -dimension of NxN
 
 Player
 -The player moves one space at a time
+
 -The player can pick up traps by walking over the square with the item
+
 -The player can place the trap by pressing on a designated key
 
 Monster
