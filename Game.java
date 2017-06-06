@@ -5,8 +5,11 @@ public class Game{
 
     private Dungeon d;
     private int size;
-    private Site mSite;
-    private Site rSite;
+    //private Site mSite;
+    //private Site rSite;
+    private Monster m; 
+    private Rogue r;
+    
 
     public Game(String filename) throws FileNotFoundException{
 
@@ -32,19 +35,34 @@ public class Game{
 	        board[r][c] = line.charAt(c);
 
 		if (board[r][c] == 'A'){
-		    //do monster stuff
+		    m = new Monster(r,c);
+		    //mSite = new Site(r,c);
 		}
 
 		if (board[r][c] == '@'){
-		    //do rogue stuff
+		    r = new Monster(r,c);
+		    //rSite = new Site(r,c);
 		}
 	    }
 	}
 
 	d = new Dungeon(board);
-
+	
+	
+    }
+    
+    /*public Site getMonsterSite(){
+	return mSite;
     }
 
+    public Site getRogueSite(){
+	return rSite;
+    }
+    
+    public Dungeon getDungeon(){
+	return d;
+	}*/
+    
 }
 
 		
