@@ -32,3 +32,7 @@ Then we will code the Dungeon class that will create an N by N dungeon with room
 Lastly, we will write the Game class that will instantiate objects defined by the other classes, and will do the game playing. 
 
 At first we will do this in the terminal, text-based, then we can port it over to processing for more visuals.
+
+6/4 - finished site
+6/5 - started monster, rogue, dungeon
+6/6 - read in file finished for game
