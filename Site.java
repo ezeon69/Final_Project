@@ -1,28 +1,27 @@
-public class Site{
+class Site {
 
-    private int row;
-    private int col;
+  int row;
+  int col;
 
-    public Site(int r,int c){
-	row = r;
-	col = c;
-    }
+  Site(int r, int c) {
+    row = r;
+    col = c;
+  }
 
-    public int getRow(){
-	return row;
-    }
+  int getRow() {
+    return row;
+  }
 
-    public int getCol(){
-	return col;
-    }
+  int getCol() {
+    return col;
+  }
 
-    public boolean equals(Site Other){
-	return (getRow() == Other.getRow()) && (getCol() == Other.getCol());
-    }
+  boolean equals(Site Other) {
+    return (getRow() == Other.getRow()) && (getCol() == Other.getCol());
+  }
 
-    //manhattan distance between site and other site
-    public int distanceTo(Site Other){
-        return Math.abs(row - Other.getRow()) + Math.abs(col - Other.getCol());
-    }
-
+  //manhattan distance between site and other site                                                                                                                                                               
+  int distanceTo(Site Other) {
+    return Math.abs(row - Other.getRow()) + Math.abs(col - Other.getCol());
+  }
 }

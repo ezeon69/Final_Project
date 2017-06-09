@@ -1,29 +1,26 @@
-public class Rogue {
+class Rogue {
 
-    Site location;
-    int hp;
+  Site location;
+  int hp;
 
-    public Rogue(int x,int y){
-	location = new Site(x,y);
-	hp = 10;
-    }
+  Rogue(int x, int y) {
+    location = new Site(x, y);
+    hp = 10;
+  }
 
-    public void hurt(int hp){
-	this.hp-=hp;
-    }
+  void hurt(int hp) {
+    this.hp-=hp;
+  }
 
-    public boolean isAlive(){
-	return hp > 0;
-    }
+  boolean isAlive() {
+    return hp > 0;
+  }
 
-    public void move(int x,int y){
-	location = new Site(x,y);
-    }
+  void move(int x, int y) {
+    location = new Site(x, y);
+  }
 
-    public Site getLocation(){
-	return location;
-    }
-    
-    
-
+  Site getLocation() {
+    return location;
+  }
 }
