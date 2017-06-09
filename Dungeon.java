@@ -25,6 +25,10 @@ public class Dungeon{
 	    b.getCol() > size()){
 	    return false;
 	}
+	//check if is corridor or room
+	if (!isCorridor || !isRoom){
+	    return false;
+	}
 	//check within one square
         if ((a.getRow() + 1 == b.getRow()) && (a.getCol() == b.getCol())){
 	    return true;
