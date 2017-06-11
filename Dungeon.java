@@ -1,4 +1,4 @@
-class Dungeon {
+public class Dungeon{
 
     private int size;
     private char[][] board;
@@ -7,19 +7,9 @@ class Dungeon {
 	size = b[0].length;
 	board = b;
     }
-  }
 
-  int size() {
-    return size;
-  }
-
-  boolean isLegalMove(Site a, Site b) {
-    //check in bounds                                                                                                                                                                                          
-    if (a.getRow() < 0 ||
-      a.getCol() < 0 ||
-      a.getRow() > size() ||
-      a.getCol() > size()) {
-      return false;
+    public int size(){
+	return size;
     }
     
     public boolean isLegalMove(Site a, Site b){

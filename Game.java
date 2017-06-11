@@ -142,10 +142,6 @@ public class Game{
     
 }
 
-    d = new Dungeon(board);
-  }
-  
-  Dungeon getDungeon(){
-     return d; 
-  }
-}
+		
+	    
+	

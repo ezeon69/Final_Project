@@ -1,4 +1,4 @@
-class Rogue {
+public class Rogue {
 
     private Game g;
     private Dungeon d;
