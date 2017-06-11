@@ -9,7 +9,7 @@ public class Game{
     private Site rSite;
     private Monster m; 
     private Rogue r;
-    
+    private static String input;
 
     public Game(String filename) throws FileNotFoundException{
 
@@ -55,7 +55,7 @@ public class Game{
     public void play(String command){
 
 	//for (int move = 1; true; move++){
-	System.out.println();
+	//System.out.println();
 
 	//monster turn
 	    
@@ -70,7 +70,6 @@ public class Game{
 	    mSite = n;
 	}
 	System.out.println(this);
-	System.out.println(command);
 	    
 	//rogue turn
 	    
@@ -79,16 +78,17 @@ public class Game{
 	//    break;
 	//}
 
-        /*n = r.move(command);
+        n = r.move(command);
+	rSite = n;
 	System.out.println(this);
-	*/
+	
 	//move to new site
-	n = r.move();
+	/*n = r.move();
 	rSite = n;
 	if (d.isLegalMove(rSite, n)){
 	    rSite = n;
 	}
-	System.out.println(this);
+	System.out.println(this);*/
 	
     }
 	//System.out.println("You lost...");
@@ -127,11 +127,9 @@ public class Game{
 	String file = args[0];
 	Game g = new Game(file);
 	System.out.println(g);
-	String input = "";
 	Scanner sc = new Scanner(System.in);
 	while (input != "stop"){
 	    input = sc.next();
-	    System.out.println(input);
 	    g.play(input);
 	}
 	System.out.println("You Lost...");

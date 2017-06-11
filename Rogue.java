@@ -12,30 +12,31 @@ public class Rogue {
 	size = d.size();
     }
 
-    public Site move(){
+    public Site move(String command){
 	Site monster = g.getMonsterSite();
 	Site rogue = g.getRogueSite();
 	Site move = null;
 	
-	if (Math.random() > .5){
+	/*if (Math.random() > .5){
 	    move = new Site(rogue.getRow() + (int)(Math.random() * 2), rogue.getCol());
 	}
 	else{
 	    move = new Site(rogue.getRow(), rogue.getCol() + (int)(Math.random() * 2));
+	    }*/
+        System.out.println(command);
+
+	if (command == "up"){
+	    move = new Site(rogue.getRow() - 1, rogue.getCol());
 	}
-        
-	/*if (command == "up"){
+	if (command == "right"){
+	    move = new Site(rogue.getRow(), rogue.getCol() + 1);
+	}
+	if (command == "left"){
 	    move = new Site(rogue.getRow(), rogue.getCol() - 1);
 	}
-	else if (command == "right"){
+	else{
 	    move = new Site(rogue.getRow() + 1, rogue.getCol());
 	}
-	else if (command == "left"){
-	    move = new Site(rogue.getRow() - 1, rogue.getCol() - 1);
-	}
-	else{
-	    move = new Site(rogue.getRow(), rogue.getCol() + 1);
-	    }*/
 	return move;
     }
 
