@@ -25,14 +25,17 @@ public class Rogue {
 	    }*/
         System.out.println(command);
 
-	if (command == "up"){
+	if (command.equals("up")){
 	    move = new Site(rogue.getRow() - 1, rogue.getCol());
 	}
-	if (command == "right"){
+	if (command.equals("right")){
 	    move = new Site(rogue.getRow(), rogue.getCol() + 1);
 	}
-	if (command == "left"){
+	if (command.equals("left")){
 	    move = new Site(rogue.getRow(), rogue.getCol() - 1);
+	}
+        if (command.equals("down")){
+	    move = new Site(rogue.getRow() + 1, rogue.getCol());
 	}
 	else{
 	    move = new Site(rogue.getRow() + 1, rogue.getCol());

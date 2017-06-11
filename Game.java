@@ -9,7 +9,6 @@ public class Game{
     private Site rSite;
     private Monster m; 
     private Rogue r;
-    private static String input;
 
     public Game(String filename) throws FileNotFoundException{
 
@@ -128,7 +127,8 @@ public class Game{
 	Game g = new Game(file);
 	System.out.println(g);
 	Scanner sc = new Scanner(System.in);
-	while (input != "stop"){
+	String input = "up";
+	while (input.equals("stop")){
 	    input = sc.next();
 	    g.play(input);
 	}
