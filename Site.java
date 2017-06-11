@@ -17,12 +17,12 @@ public class Site{
     }
 
     public boolean equals(Site Other){
-	return (getRow() == Other.getRow()) && (getCol() == Other.getCol());
+	return (this.getRow() == Other.getRow()) && (this.getCol() == Other.getCol());
     }
 
     //manhattan distance between site and other site
     public int distanceTo(Site Other){
-        return Math.abs(row - Other.getRow()) + Math.abs(col - Other.getCol());
+        return Math.abs(this.getRow() - Other.getRow()) + Math.abs(this.getCol() - Other.getCol());
     }
 
 }

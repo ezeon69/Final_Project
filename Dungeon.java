@@ -1,10 +1,11 @@
 public class Dungeon{
 
     private int size;
+    private char[][] board;
     
-    public Dungeon(char[][]board){	
-	size = board.length;
-	
+    public Dungeon(char[][]b){	
+	size = b[0].length;
+	board = b;
     }
 
     public int size(){
@@ -26,7 +27,7 @@ public class Dungeon{
 	    return false;
 	}
 	//check if is corridor or room
-	if (!isCorridor || !isRoom){
+	if (!isCorridor(b) || !isRoom(b)){
 	    return false;
 	}
 	//check within one square
@@ -48,11 +49,14 @@ public class Dungeon{
     }
     
     public boolean isCorridor(Site s){
-        return board[s.getRow()][s.getCol] == '+';
+        return board[s.getRow()][s.getCol()] == '+';
     }
 
     public boolean isRoom(Site s){
-	return board[s.getRow()][s.getCol] == '.';
+	return board[s.getRow()][s.getCol()] == '.';
     }
-    
+
+    public boolean isWall(Site s){
+	return board[s.getRow()][s.getCol()] == ' ';
+    }
 }
