@@ -128,7 +128,7 @@ public class Game{
 	System.out.println(g);
 	Scanner sc = new Scanner(System.in);
 	String input = "up";
-	while (input.equals("stop")){
+	while (!(input.equals("stop"))){
 	    input = sc.next();
 	    g.play(input);
 	}
