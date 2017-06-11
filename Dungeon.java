@@ -1,14 +1,11 @@
 class Dungeon {
 
-  int size;
-  char [][] board;
-
-  Dungeon(char[][]board) {
-    size = board.length;
-    for (int r = 0; r < size; r ++) {
-      for (int c = 0; c < size; c ++) {
-        this.board[r][c] = board[r][c];
-      }
+    private int size;
+    private char[][] board;
+    
+    public Dungeon(char[][]b){	
+	size = b[0].length;
+	board = b;
     }
   }
 
@@ -24,42 +21,52 @@ class Dungeon {
       a.getCol() > size()) {
       return false;
     }
-    if (b.getRow() < 0 ||
-      b.getCol() < 0 ||
-      b.getRow() > size() ||
-      b.getCol() > size()) {
-      return false;
+    
+    public boolean isLegalMove(Site a, Site b){
+	//check in bounds
+        if (a.getRow() < 0 ||
+	    a.getCol() < 0 ||
+	    a.getRow() > size() ||
+	    a.getCol() > size()){
+	    return false;
+	}
+	if (b.getRow() < 0 ||
+	    b.getCol() < 0 ||
+	    b.getRow() > size() ||
+	    b.getCol() > size()){
+	    return false;
+	}
+	//check if is corridor or room
+	if (!isCorridor(b) || !isRoom(b)){
+	    return false;
+	}
+	//check within one square
+        if ((a.getRow() + 1 == b.getRow()) && (a.getCol() == b.getCol())){
+	    return true;
+	}
+	if ((a.getRow() - 1 == b.getRow()) && (a.getCol() == b.getCol())){
+	    return true;
+	}
+	if ((a.getRow() == b.getRow()) && (a.getCol() + 1 == b.getCol())){
+	    return true;
+	}
+	if ((a.getRow() == b.getRow()) && (a.getCol() - 1 == b.getCol())){
+	    return true;
+	}
+	else{
+	    return false;
+	}	
     }
-    //check within one square                                                                                                                                                                                  
-    if ((a.getRow() + 1 == b.getRow()) && (a.getCol() == b.getCol())) {
-      return true;
+    
+    public boolean isCorridor(Site s){
+        return board[s.getRow()][s.getCol()] == '+';
     }
-    if ((a.getRow() - 1 == b.getRow()) && (a.getCol() == b.getCol())) {
-      return true;
-    }
-    if ((a.getRow() == b.getRow()) && (a.getCol() + 1 == b.getCol())) {
-      return true;
-    }
-    if ((a.getRow() == b.getRow()) && (a.getCol() - 1 == b.getCol())) {
-      return true;
-    } else {
-      return false;
-    }
-  }
 
-  boolean isCorridor(Site s) {
-    return board[s.getRow()][s.getCol()] == '+';
-  }
+    public boolean isRoom(Site s){
+	return board[s.getRow()][s.getCol()] == '.';
+    }
 
-  boolean isRoom(Site s) {
-    return board[s.getRow()][s.getCol()] == '.';
-  }
-
-  char getSpot(int r, int c) {
-    return board[r][c];
-  }
-  
-  char[][] getBoard(){
-     return board; 
-  }
+    public boolean isWall(Site s){
+	return board[s.getRow()][s.getCol()] == ' ';
+    }
 }
