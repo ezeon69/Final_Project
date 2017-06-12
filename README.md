@@ -2,33 +2,34 @@
 
 Rogue is a game where there is a dungeon with a specified size, a monster (the computer) and the player. If the monster intercepts the player, the monster attacks the player, and depending on its health, the player continues or loses the game. The original game has the player pick up weapons and then allow the player to attack the monster. The fighting is done by the computer, and is a bit random. So instead, we decided to have the player pick up traps and strategically set them up across the map to defeat the monsters instead of fighting them and letting the computer decide the outcome, regardless of how skilled the player might be. 
 
-##Features : 
+**_Features:_** 
 
-###Dungeon
+**Dungeon**
 
--will be drawn in processing, where the dungeon text file is read in and "translated" to tiles
+- will be drawn in processing, where the dungeon text file is read in and "translated" to tiles
 
--blue : room
- red : cooridor
- yellow : rogue
- pink : monster
+- blue : room
+  red : cooridor
+  yellow : rogue
+  pink : monster
 
--dimension of NxN
+- dimension of NxN
 
 
-###Player
+**Player**
 
--The player moves one space at a time
+- The player moves one space at a time
 
--The player can pick up traps by walking over the square with the item
+- The player can pick up traps by walking over the square with the item
 
--The player can place the trap by pressing on a designated key
+- The player can place the trap by pressing on a designated key
 
-###Monster
--  AI based, can move one space at a time
-- will compute the shortest path between itself and the player (manhattan distance)
+**Monster**
+- AI based, can move one space at a time
+- Will compute the shortest path between itself and the player (manhattan distance)
+- plans move accordingly
 --------------------------------------------------------------------------------------
-##Distribution
+**Distribution**
 
 Code the class Site which will specify the location of the monster and player. It will also have a methods that determines the distance between sites.
 Next, we will code the class Monster that will create a new Monster and allow the Monster to move to a specified location.
@@ -37,7 +38,7 @@ Then we will code the Dungeon class that will create an N by N dungeon with room
 Lastly, we will write the Game class that will instantiate objects defined by the other classes, and will do the game playing. 
 At first we will do this in the terminal, text-based, then we can port it over to processing for more visuals.
 
-##Log
+**Log**
 
 6/1 - created repo
 6/1 - finished site
