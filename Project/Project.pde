@@ -21,10 +21,11 @@ void draw() {
 
   for (int r = 0; r < gameBoard.length; r ++) {
     for (int c = 0; c < gameBoard.length; c ++) {
-      if (gameBoard[r][c] == '+') fill(color(255, 0, 0));
+      if (gameBoard[r][c] == '+') fill(color(255, 255, 255));
       else if (gameBoard[r][c] == '.') fill(color(0, 0, 255));
       else if (gameBoard[r][c] == '@') fill(color(255,255,0));
-      else if (gameBoard[r][c] == 'A') fill(color(255,0,255));
+      else if (gameBoard[r][c] == 'A') fill(color(255,0,0));
+      else if (gameBoard[r][c] == '^') fill(color(255,100,200));
       else fill(color(0, 0, 0));
       noStroke();
       rect(x, y, 20, 20);
@@ -35,6 +36,7 @@ void draw() {
   }
   x = y = 0;
   
+  if (dun.death()) background(0);
   
   
   
@@ -56,5 +58,6 @@ void keyPressed() {
     dun.moveRogue("LEFT");
     break;
   }
+  
   dun.moveMon();
 }

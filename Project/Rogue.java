@@ -1,22 +1,15 @@
 class Rogue {
 
-  int hp,x,y;
+  int x,y,traps;
   Site location;
 
   Rogue(int x, int y) {
     location = new Site(x, y);
     this.x = x;
     this.y = y;
-    hp = 10;
+    traps = 0;
   }
 
-  void hurt(int hp) {
-    this.hp-=hp;
-  }
-
-  boolean isAlive() {
-    return hp > 0;
-  }
 
   void move(Site next) {
     location = next;
@@ -36,5 +29,13 @@ class Rogue {
   */
   Site getLocation() {
     return location;
+  }
+  
+  void addTraps(int num){
+    traps+=num;
+  }
+  
+  void addTrap(){  
+     traps++; 
   }
 }
