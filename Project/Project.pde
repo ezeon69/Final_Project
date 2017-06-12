@@ -37,7 +37,7 @@ void setup() {
 
 
   x = y = 0;
-  lines = loadStrings("/Users/Alex/Documents/Final_Project/Project/Board1.txt");
+  lines = loadStrings("Board1.txt");
   printArray(lines);
   dun = new Dungeon(lines);
 }
