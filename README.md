@@ -2,6 +2,11 @@
 
 Rogue is a game where there is a dungeon with a specified size, a monster (the computer) and the player. If the monster intercepts the player, the monster attacks the player, and depending on its health, the player continues or loses the game. The original game has the player pick up weapons and then allow the player to attack the monster. The fighting is done by the computer, and is a bit random. So instead, we decided to have the player pick up traps and strategically set them up across the map to defeat the monsters instead of fighting them and letting the computer decide the outcome, regardless of how skilled the player might be. 
 
+**_Instructions_**
+1. Clone the repo
+2. Run Project.pde
+3. Use the arrow keys to move, t to place a trap and try to avoid the monster as long as possible or kill it.
+
 **_Features:_** 
 
 **Dungeon**
@@ -68,3 +73,5 @@ At first we will do this in the terminal, text-based, then we can port it over t
 6/10 - porting over to processing
 
 6/11 - deleted unecessary classes like game, wrapping up
+
+6/12 - finish
