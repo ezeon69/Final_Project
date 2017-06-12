@@ -9,8 +9,11 @@ Rogue is a game where there is a dungeon with a specified size, a monster (the c
 - will be drawn in processing, where the dungeon text file is read in and "translated" to tiles
 
 - blue : room
-  red : cooridor
+
+  red : corridor
+  
   yellow : rogue
+  
   pink : monster
 
 - dimension of NxN
@@ -28,6 +31,12 @@ Rogue is a game where there is a dungeon with a specified size, a monster (the c
 - AI based, can move one space at a time
 - Will compute the shortest path between itself and the player (manhattan distance)
 - plans move accordingly
+
+**Dungeon**
+ - unique dungeons
+ - # = empty space
+  . = room
+  + = corridor
 --------------------------------------------------------------------------------------
 **_Distribution_**
 
@@ -41,10 +50,17 @@ At first we will do this in the terminal, text-based, then we can port it over t
 **_Log_**
 
 6/1 - created repo
+
 6/1 - finished site
+
 6/5 - started monster, rogue, dungeon
+
 6/6 - read in file finished for game
+
 6/7 - fixed up booleans, monster, rogue, dungeon nearly complete
+
 6/9 - finished in java, prints in terminal with random movement for monster, input based for terminal
+
 6/10 - porting over to processing
+
 6/11 - deleted unecessary classes like game, wrapping up
