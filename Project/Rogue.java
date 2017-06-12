@@ -31,11 +31,19 @@ class Rogue {
     return location;
   }
   
+  boolean hasTrap(){
+     return traps > 0; 
+  }
+  
   void addTraps(int num){
     traps+=num;
   }
   
   void addTrap(){  
      traps++; 
+  }
+  
+  void removeTrap(){
+     traps--; 
   }
 }
