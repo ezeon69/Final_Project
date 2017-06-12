@@ -6,9 +6,12 @@ Features :
 
 Dungeon
 
--will be text based
+-will be drawn in processing, where the dungeon text file is read in and "translated" to tiles
 
--simple graphics like one letter representing the player, monster or tiles
+-blue : room
+ red : cooridor
+ yellow : rogue
+ pink : monster
 
 -dimension of NxN
 
@@ -33,6 +36,11 @@ Lastly, we will write the Game class that will instantiate objects defined by th
 
 At first we will do this in the terminal, text-based, then we can port it over to processing for more visuals.
 
-6/4 - finished site
+6/1 - created repo
+6/1 - finished site
 6/5 - started monster, rogue, dungeon
 6/6 - read in file finished for game
+6/7 - fixed up booleans, monster, rogue, dungeon nearly complete
+6/9 - finished in java, prints in terminal with random movement for monster, input based for terminal
+6/10 - porting over to processing
+6/11 - deleted unecessary classes like game, wrapping up
