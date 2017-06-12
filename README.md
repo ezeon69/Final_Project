@@ -29,7 +29,7 @@ Rogue is a game where there is a dungeon with a specified size, a monster (the c
 - Will compute the shortest path between itself and the player (manhattan distance)
 - plans move accordingly
 --------------------------------------------------------------------------------------
-**Distribution**
+**_Distribution_**
 
 Code the class Site which will specify the location of the monster and player. It will also have a methods that determines the distance between sites.
 Next, we will code the class Monster that will create a new Monster and allow the Monster to move to a specified location.
@@ -38,7 +38,7 @@ Then we will code the Dungeon class that will create an N by N dungeon with room
 Lastly, we will write the Game class that will instantiate objects defined by the other classes, and will do the game playing. 
 At first we will do this in the terminal, text-based, then we can port it over to processing for more visuals.
 
-**Log**
+**_Log_**
 
 6/1 - created repo
 6/1 - finished site
