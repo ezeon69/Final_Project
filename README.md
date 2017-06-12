@@ -34,9 +34,10 @@ Rogue is a game where there is a dungeon with a specified size, a monster (the c
 
 **Dungeon**
  - unique dungeons
- - # = empty space
-  . = room
-  + = corridor
+ - in text file :
+   "#" = wall/empty space
+   "." = room
+   "+" = corridor
 --------------------------------------------------------------------------------------
 **_Distribution_**
 
